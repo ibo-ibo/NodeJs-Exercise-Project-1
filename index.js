@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const http = require("http");
 const { URL } = require("url");
-
+const replaceTemplate = require("./modules/replaceTemplate");
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const dataObj = JSON.parse(data);
 let tempOverview = fs.readFileSync(
